@@ -6,8 +6,7 @@
 
   <PropertyGroup>
     <LangVersion>preview</LangVersion>
-    <FileVersion></FileVersion>
-    <ApplicationIcon>E:\Developments\AuFe\AuFe\wwwroot\icon\AuFe.svg</ApplicationIcon>
+    <StartupObject>AuFe.Program</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -29,14 +29,14 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            User user = db.Users.FirstOrDefault(u => u.Login == model.Login && u.Password == model.Password);
+            User user = db.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
             if (user != null)
             {
-                await Authenticate(model.Login); // аутентификация
+                await Authenticate(user.Login); // аутентификация
 
                 return RedirectToAction("Index", "Home");
             }
-            ModelState.AddModelError("", "Некорректные логин и(или) пароль");
+            ModelState.AddModelError("", "Некорректные E-mail и(или) пароль");
         }
         return View(model);
     }
@@ -51,7 +51,7 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            User user = db.Users.FirstOrDefault(u => u.Login == model.Login);
+            User user = db.Users.FirstOrDefault(u => u.Login == model.Login || u.Email == model.Email);
             if (user == null)
             {
                 // добавляем пользователя в бд
@@ -63,7 +63,7 @@ public class AccountController : Controller
                 return RedirectToAction("Index", "Home");
             }
             else
-                ModelState.AddModelError("", "Некорректные логин и(или) пароль");
+                ModelState.AddModelError("", "Некорректные: и(или) логин, и(или) E-mail, и(или) пароль.");
         }
         return View(model);
     }
