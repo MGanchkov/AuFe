@@ -1,6 +1,7 @@
 ﻿using AuFe.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
 namespace AuFe.Controllers;
@@ -22,6 +23,7 @@ public class HomeController : Controller
 
     public IActionResult About()
     {
+        _logger?.LogInformation($"About: {User.Identity.Name}");
         return Content($"Authorized: {User.Identity.Name}");
     }
 
