@@ -1,2 +1,2 @@
 
-start "AuFe" /D ".\AuFe\bin\Debug\net6.0\" "AuFe.exe"
+start "AuFe" /D ".\AuFe\bin\Debug\netcoreapp3.1\" "AuFe.exe"
