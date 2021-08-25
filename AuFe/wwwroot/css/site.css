@@ -1,0 +1,239 @@
+﻿/*общие*/
+.container {
+    min-width: 1024px;
+}
+
+.ava img {
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+}
+
+.ava {
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    border-radius: 30px;
+    background: #999;
+    margin: 4pt;
+}
+/* ======================================================== */
+/*Описание стиля шапки сайта*/
+header {
+    box-shadow: 0px 10px 7px -14px rgb(175 165 165 / 42%);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+    header .back a {
+        font-size: 22pt;
+        letter-spacing: -4px;
+        padding-left: 10pt;
+    }
+    /**/
+    header .user {
+        font-size: 16pt;
+        letter-spacing: 3px;
+        padding-left: 2rem;
+    }
+
+        header .user p {
+            float: left;
+            padding-left: 1rem;
+            color: #0a3158;
+        }
+    /**/
+    header menu {
+        margin: 0;
+    }
+
+    header ul {
+        margin: 0;
+    }
+
+    header li {
+        float: left;
+        margin-right: 2rem;
+        list-style: none;
+    }
+
+    header a {
+        text-decoration: none;
+        color: #0f245ffc;
+        font-size: 11pt;
+        font-family: system-ui;
+        text-transform: uppercase;
+        letter-spacing: 2pt;
+        padding: 0.6rem 0.6rem;
+    }
+
+        header a:hover {
+            background-color: #cdf0f72b;
+            color: #000;
+        }
+/*=======================================================*/
+/*main*/
+main h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+main p {
+    font-size: 16pt;
+    letter-spacing: 1pt;
+    word-spacing: 7pt;
+    line-height: 24pt;
+}
+/**/
+main .button {
+    font-size: 16pt;
+}
+
+    main .button label {
+        max-height: 50px;
+        float: left;
+        margin-bottom: 2rem;
+    }
+
+        main .button label img {
+            cursor: pointer;
+            height: 40px;
+            margin: 1rem 0.3rem;
+            /*    background-color: #f2fafbe8;*/
+            border: 0;
+            font: 400 20pt Arial;
+            padding: 0.3rem;
+            margin: 1rem 0.3rem;
+        }
+
+            main .button label img:hover {
+                height: 45px;
+                margin: 0.7rem 0.12rem;
+            }
+
+    main .button input {
+        background-color: #f2fafbe8;
+        border: 0;
+        font: 400 20pt Arial;
+        padding: 0.3rem;
+        margin: 1rem 0.3rem;
+        width: 2rem;
+        display: none;
+    }
+
+        main .button input:hover {
+            color: red;
+            cursor: pointer;
+            /*    font-size: 24pt !important;*/
+        }
+
+    main .button button {
+        cursor: pointer;
+        margin: 2rem;
+        padding: 0.8rem 0.8rem;
+        font-size: inherit;
+        background-color: #010813ed;
+        border: 0;
+        color: #fff;
+    }
+
+        main .button button:hover {
+            background-color: #024f5f;
+        }
+
+        main .button button span {
+            padding: 0.3rem;
+        }
+/*Комментарии*/
+main .comment > .row {
+    margin: 3rem -1rem 2rem;
+}
+
+main .comment .ava {
+    float: left;
+}
+
+main .comment form input, main .comment form button {
+    height: 32pt;
+    margin: 0.5rem 0rem;
+    border: 0;
+    background-color: #eeefee;
+    ;
+}
+
+    main .comment form input[type="text"] {
+        width: 70%;
+        margin-left: 2rem;
+        border-radius: 16pt 0 0 16pt;
+        float: left;
+        padding: 1.5pt 11pt;
+        font-size: 16pt;
+    }
+
+main .comment form button {
+    border-radius: 0 16pt 16pt 0;
+    cursor: pointer;
+}
+/*убираем фокус с формы*/
+main .comment form:focus, main .comment input:focus, main .comment button:focus {
+    outline: none;
+}
+
+main .comment .ava + p {
+    margin-left: 2rem;
+}
+
+main .comment p span {
+    padding: 1rem 1rem;
+    font-size: 10pt;
+}
+
+main .comment .button button {
+    background-color: #ffffff00;
+    color: #928d8d;
+    margin: 0;
+    float: left;
+    padding: 1rem 2rem;
+    margin-right: 16%;
+}
+
+    main .comment .button button:hover {
+        background-color: #cdf0f72b;
+        color: #333;
+    }
+
+main .comment div[id] {
+    padding: 1rem;
+}
+/**/
+main .comment .otvet-button {
+    width: 100%;
+}
+
+    main .comment .otvet-button a {
+        text-decoration: none;
+        list-style: decimal;
+        color: #333;
+    }
+
+        main .comment .otvet-button a:hover {
+            color: #000;
+        }
+
+    main .comment .otvet-button p {
+        margin-top: 0;
+    }
+
+main .comment .otvet-comment {
+    border-left: 3px solid #8e8e8e;
+    margin-left: 3%;
+    padding-left: 3%;
+}
+/*для обработки кнопок*/
+/*
+main #comment{
+    display: none;
+}
+*/

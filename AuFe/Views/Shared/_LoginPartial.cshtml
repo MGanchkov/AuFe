@@ -1,0 +1,32 @@
+﻿
+
+@if (User.Identity.IsAuthenticated)
+{
+     <form>
+        <button asp-controller="Account" asp-action="Manage" type="submit" class="btn btn-link text-dark">
+             <img src="~/img/img1.jpg" alt="" class="col-xl-auto ava">@User.Identity.Name
+		</button>
+        <button asp-controller="Account" asp-action="Logout" type="submit" class="btn btn-link text-dark">Logout</button>
+    </form>
+    @*
+        <form>
+        
+        <a asp-controller="Account" asp-action="Manage" title="Manage">
+            <div class="col-xl-auto ava">
+                <img src="~/img/img1.jpg" alt="">                        
+            </div>
+            <div class="col-xl-auto user">
+                <p>@User.Identity.Name</p>    
+            </div>
+		</a>
+        <button asp-controller="Account" asp-action="Logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+    </form>
+	*@
+}
+else 
+{
+    <form>
+        <button asp-controller="Account" asp-action="Register" type="submit"class="btn btn-link text-dark">Регистрация</button>
+        <button asp-controller="Account" asp-action="Login" type="submit"class="btn btn-link text-dark">Вход</button>
+	</form>
+}

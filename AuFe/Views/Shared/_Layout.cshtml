@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @*Шапка страниц*@
+    <header>
+        @*Навигация в шапке*@
+        <div class="controller">
+            <div class="row">
+
+                <div class="col-xl">
+                    <menu class="row justify-content-center">
+                        <div>
+                            <form>
+                                <button asp-controller="Home" asp-action="Index" type="submit" class="btn btn-link text-dark">Главная</button>
+                                <button asp-controller="Book" asp-action="Create" type="submit" class="btn btn-link text-dark">Создать</button>
+                                <button asp-controller="" asp-action="" type="submit" class="btn btn-link text-dark"></button>
+                                <partial name="_LoginPartial" /></li>
+						    </form>
+						</div>
+                        
+                        
+                    </menu>
+                </div>
+                
+            </div>
+       </div>
+    </header>
+
+    <main>
+        @*Основное тело страниц*@
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+	</main>
+    
+
+</body>
+</html>
